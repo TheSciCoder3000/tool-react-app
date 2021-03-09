@@ -11,7 +11,21 @@
 .tasks-container {
     padding-top: 0.8rem;
     overflow-y: auto;
+    flex-shrink: 2;
 }
+.tasks-container::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(179, 179, 179, 0.404);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.tasks-container::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: rgba(143, 143, 143, 0.486);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
 .task-item {
     margin: 0 0.8rem 0.8rem;
     padding: 0.8rem 0.4rem;

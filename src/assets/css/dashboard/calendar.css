@@ -1,4 +1,4 @@
-.calendar-header {
+.calendar-widget .calendar-header {
     display: flex;
     justify-content: center;
     padding: 0 1.2rem;
@@ -20,28 +20,40 @@
     cursor: pointer;
 }
 
-.calendar-body {
+.calendar-widget .calendar-body {
     padding: 0 1.2rem;
 }
 
-.cal-row {
+.calendar-widget .cal-row {
     display: flex;
     margin: 1.5rem 0;
 }
-.day, .date {
+.calendar-widget .day,
+.calendar-widget .date {
     flex: 1;
     text-align: center;
     cursor: context-menu;
     user-select: none;
 }
-.day {
+.calendar-widget .day {
     font-weight: bold;
 }
 
+.current {
+    position: relative;
+}
 .current > span {
+    position: relative;
+    color: white;
+    font-weight: 900;
+}
+.current::before {
+    position: absolute;
     border-radius: 50%;
     background-color: #088F8F;
-    font-weight: bold;
-    color: white;
-    padding: 0.5rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    left: 0.35rem;
+    top: -0.3rem;
+    content: '';
 }
